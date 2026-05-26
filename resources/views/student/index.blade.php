@@ -57,6 +57,7 @@
                             <th>Nama</th>
                             <th>Email</th>
                             <th>Prodi</th>
+                            <th>Foto</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -69,7 +70,30 @@
                                 <td>{{ $data->email }}</td>
                                 <td>{{ $data->prodi }}</td>
                                 <td>
-                                    <a href="/student/edit/{{ $data->nim }}" class="btn btn-warning btn-sm">Edit</a>
+                                    @if($data->foto)
+                                        <img src="{{ asset('storage/foto/'.$data->foto) }}"
+                                            width="80"
+                                            class="img-thumbnail">
+                                    @else
+                                        Tidak ada foto
+                                    @endif
+                                </td>
+                                <td>
+                                    <a href="/student/edit/{{ $data->nim }}" class="btn btn-warning btn-sm">
+                                        Edit
+                                    </a>
+
+                                    <a href="/student/preview/{{ $data->nim }}"
+                                    class="btn btn-info btn-sm"
+                                    target="_blank">
+                                        Preview
+                                    </a>
+
+                                    <a href="/student/download/{{ $data->nim }}"
+                                    class="btn btn-success btn-sm">
+                                        Download
+                                    </a>
+
                                     <form action="/student/delete/{{ $data->nim }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')
@@ -82,7 +106,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="6">Belum ada data mahasiswa.</td>
+                                <td colspan="7">Belum ada data mahasiswa.</td>
                             </tr>
                         @endforelse
                     </tbody>

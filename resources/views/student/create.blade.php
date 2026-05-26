@@ -41,7 +41,7 @@
             <a href="/student" class="btn btn-secondary">Kembali</a>
         </div>
 
-        <form action="/student/add" method="POST">
+        <form action="/student/add" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
                 <div class="form-group">
@@ -77,6 +77,18 @@
                         <option value="Teknik Rekayasa Perangkat Lunak">Teknik Rekayasa Perangkat Lunak</option>
                     </select>
                     @error('prodi')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <div class="form-group">
+                    <label>Foto</label>
+                    <input type="file"
+                        name="foto"
+                        class="form-control @error('foto') is-invalid @enderror"
+                        accept=".jpg,.jpeg,.png">
+
+                    @error('foto')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
