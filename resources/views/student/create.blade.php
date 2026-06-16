@@ -1,44 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Mahasiswa</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <style>
-        body {
-            background: #f4f7fb;
-        }
-        .navbar-custom {
-            background: linear-gradient(90deg, #198754, #157347);
-        }
-        .card-custom {
-            border: none;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
-        .footer {
-            margin-top: 40px;
-            padding: 15px 0;
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
+@extends('layouts/admin')
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-    <div class="container">
-        <span class="navbar-brand font-weight-bold">Tambah Data Mahasiswa</span>
-    </div>
-</nav>
+@push('title', 'Tambah Mahasiswa')
 
-<div class="container mt-5">
-    <div class="card card-custom">
-        <div class="card-header bg-white d-flex justify-content-between align-items-center">
-            <h4 class="mb-0">Form Tambah Mahasiswa</h4>
-            <a href="/student" class="btn btn-secondary">Kembali</a>
+@section('content')
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex justify-content-between align-items-center">
+            <h6 class="m-0 font-weight-bold text-primary">Form Tambah Mahasiswa</h6>
+            <a href="/student" class="btn btn-secondary btn-sm">Kembali</a>
         </div>
 
         <form action="/student/add" method="POST" enctype="multipart/form-data">
@@ -101,10 +70,4 @@
         </form>
     </div>
 
-    <div class="footer">
-        © 2026 CRUD Laravel Project | Dibuat oleh Dwiki Nur Setiyanto
-    </div>
-</div>
-
-</body>
-</html>
+@endsection

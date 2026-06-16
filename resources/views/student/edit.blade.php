@@ -1,65 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Mahasiswa</title>
+@extends('layouts/admin')
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+@push('title', 'Edit Mahasiswa')
 
-    <style>
-        body {
-            background: #f4f7fb;
-        }
+@section('content')
 
-        .navbar-custom {
-            background: linear-gradient(90deg, #ffc107, #e0a800);
-        }
-
-        .card-custom {
-            border: none;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
-
-        .footer {
-            margin-top: 40px;
-            padding: 15px 0;
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .preview-foto {
-            width: 140px;
-            border-radius: 10px;
-            border: 1px solid #ddd;
-            padding: 5px;
-            background: white;
-        }
-    </style>
-</head>
-
-<body>
-
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-    <div class="container">
-        <span class="navbar-brand font-weight-bold">
-            Edit Data Mahasiswa
-        </span>
-    </div>
-</nav>
-
-<div class="container mt-5">
-
-    <div class="card card-custom">
-
-        <div class="card-header bg-white d-flex justify-content-between align-items-center">
-            <h4 class="mb-0">Form Edit Mahasiswa</h4>
-
-            <a href="/student" class="btn btn-secondary">
-                Kembali
-            </a>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex justify-content-between align-items-center">
+            <h6 class="m-0 font-weight-bold text-primary">Form Edit Mahasiswa</h6>
+            <a href="/student" class="btn btn-secondary btn-sm">Kembali</a>
         </div>
 
         <!-- PENTING -->
@@ -166,7 +114,7 @@
                         @if($student->foto)
 
                             <img src="{{ asset('storage/foto/'.$student->foto) }}"
-                                 class="preview-foto">
+                                 style="width: 140px; border-radius: 10px; border: 1px solid #ddd; padding: 5px; background: white;">
 
                         @else
 
@@ -218,12 +166,4 @@
 
     </div>
 
-    <div class="footer">
-        © 2026 CRUD Laravel Project |
-        Dibuat oleh Dwiki Nur Setiyanto
-    </div>
-
-</div>
-
-</body>
-</html>
+@endsection
