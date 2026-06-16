@@ -1,6 +1,6 @@
 # 🎓 CRUD Laravel - Manajemen Data Mahasiswa
 
-[![Laravel Version](https://img.shields.io/badge/Laravel-v10.x-FF2D20?style=flat-square&logo=laravel)](https://laravel.com)
+[![Laravel Version](https://img.shields.io/badge/Laravel-v12.x-FF2D20?style=flat-square&logo=laravel)](https://laravel.com)
 [![PHP Version](https://img.shields.io/badge/PHP-v8.x-777BB4?style=flat-square&logo=php)](https://www.php.net)
 [![Bootstrap Version](https://img.shields.io/badge/Bootstrap-v4.6-7952B3?style=flat-square&logo=bootstrap)](https://getbootstrap.com)
 
