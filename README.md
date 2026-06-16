@@ -34,7 +34,7 @@ Ikuti langkah-langkah di bawah ini untuk memasang dan menjalankan aplikasi di li
 ### 1. Persiapan Repositori
 Kloning repositori ini ke komputer lokal Anda:
 ```bash
-git clone <url-repository-anda>
+git clone https://github.com/DwikiNurSetiyanto/crud_Laravel
 cd crud_laravel
 ```
 
